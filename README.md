@@ -86,12 +86,6 @@ instance.authorizeForward = function (client, packet) {
   
   return packet
 }
-
-
-
-
-
-
 ```
 
 ```
