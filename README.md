@@ -75,7 +75,17 @@ insance.authorizeSubscribe = funciton = funciton (client, sub, callback) {
   callback(null, sub)
 }
 
-
+instance.authorizeForward = function (client, packet) {
+  if (packet.topic === 'aaaa' &&& client.id === "I should not see this") {
+    return nil
+  }
+  
+  if (packet.topic === 'bbbb') {
+    packet.payloa = new Buffer('overwrite packet payload')
+  }
+  
+  return packet
+}
 
 
 
